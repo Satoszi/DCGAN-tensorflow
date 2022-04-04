@@ -1,38 +1,33 @@
 # DCGAN-tensorflow
 
-This is a simple DCGAN implementation of https://arxiv.org/pdf/1511.06434.pdf for generating new unseen images within the same domain as the dataset in 64x64 resolution.
-The model was trained for 10 epochs using a celeb-hq dataset containing 200k face examples which means that model was feeded with 2mln examples. In practice it was giving satisfactory results even with dataset containing 5k celeb images but, generated images was noticeably lower quality (model was starting to overfit after several epochs)
+This is a simple DCGAN implementation of https://arxiv.org/pdf/1511.06434.pdf for generating new unseen images within the same domain as the dataset (in 64x64 resolution).
+The model was trained for 10 epochs using a celeb-hq dataset containing 200k face examples, which means that model was feeded with 2mln examples. In practice it was giving satisfactory results even with dataset containing 5k celeb images, but generated images was noticeably lower quality (model was starting to overfit after several epochs)
 
 ## Results
 
-Generated images as a gif for 16 fixed noises through the 10 epochs of training
+### 64x4 images
 
+Generated images as a gif for 16 fixed noises, through the 10 epochs of training.
 ![](resources/training_gif.gif)
 
-Samples for last (10th) epoch
-
+Samples for last (10th) epoch:
 ![](resources/generated_plot_index-136_epoch-10.png)
 
-Discriminator and generator losses
-
+Discriminator and generator losses:
 ![](resources/losses.png)
 
-## 128x128 and 256x256 Results
+### 128x128 images
 
-I also tried with higher resolutions by simply adding 1 additional convolutional layer with strides = 2 to the generator and discriminator. 
+I also tried with higher resolutions, by simply adding additional convolutional layer with strides = 2 to the generator and discriminator. 
 
-For 128x128 training took much more computation and memory resources (about x4 longer training) - Training last a few hourd with one 3060ti.
-128x128 celeb-hq:
-
+For 128x128 training took much more computation and memory resources (about x4 longer training than 64x64) - Training last a few hour with one 3060ti.
 ![](resources/training_gif_128.gif)
-
 Samples for last (65th) epoch
-
 ![](resources/generated_plot_128.png)
 
-For 256x256 training took about 12h (about x16 longer training than 64x64)
-256x256 celeb-hq:
+### 128x128 images
 
+For 256x256 training took about 12h (about x16 longer training than 64x64)
 ![](resources/generated_plot_256.png)
 
 
