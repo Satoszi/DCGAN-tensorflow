@@ -20,7 +20,7 @@ Discriminator and generator losses:
 
 I also tried with higher resolutions, by simply adding additional convolutional layer with strides = 2 to the generator and discriminator. 
 
-For 128x128 training took much more computation and memory resources (about x4 longer training than 64x64) - Training last a few hour with one 3060ti.
+For 128x128 training took much more computation and memory resources (about x4 longer training than 64x64) - Training last a few hours with one 3060ti.
 ![](resources/training_gif_128.gif)
 Samples for last (65th) epoch
 ![](resources/generated_plot_128.png)
