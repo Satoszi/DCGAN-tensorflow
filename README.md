@@ -38,11 +38,11 @@ For 256x256 training took about 12h (about x16 longer training than 64x64)
 ![](resources/generated_plot_256.png)
 
 
-## Training tricks applied in this implementation
+## Training tricks and tips applied in this implementation
 
-* To avoid the fast convergence of the discriminator network, the generator network is updated more frequently.
+* The generator is updated more frequently to avoid the fast convergence of the discriminator.
 * Label smoothing is applied to the labels.
-* Reconstruction loss with an annealed weight is applied as an auxiliary loss to help the generator get rid of the initial local minimum.
-* Inputs/outputs normalization to the range [-1, 1] and use tanh in the generator output.
-* GaussianNoise as the regularization
-* LeakyReLU discriminator and relu in generator.
+* Inputs/outputs normalization to the range [-1, 1] and tanh activation in the generator output.
+* GaussianNoise as the regularization method in the discriminator.
+* LeakyReLU in the discriminator and relu in the generator.
+* The larger resolution the larger dataset is needed. For example for 64x64 resolution 1000 examples gives weak results, 5k gives satisfactory results. When using more than 30k I couldn't see any overfitting and further increasing the dataset probably will not help.
