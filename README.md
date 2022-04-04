@@ -5,7 +5,7 @@ The model was trained for 10 epochs using a celeb-hq dataset containing 200k fac
 
 ## Results
 
-### 64x4 images
+### 64x64 images
 
 Generated images as a gif for 16 fixed noises, through the 10 epochs of training.
 
