@@ -31,7 +31,7 @@ Samples for last (65th) epoch
 
 ![](resources/generated_plot_128.png)
 
-### 128x128 images
+### 256x256 images
 
 For 256x256 training took about 12h (about x16 longer training than 64x64)
 
